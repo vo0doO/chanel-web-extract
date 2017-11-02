@@ -1,0 +1,11 @@
+<% layout('layout') -%>
+
+<h3>Command to restart bots:</h3>
+<p>pm2 restart all</p>
+<h3>Commands to start bot after server reboot:</h3>
+<p>Go to /public_html/epg/libs and run:</p>
+<p>pm2 start auto_extract_in-com</p>
+<p>pm2 start auto_extract_indiatimes-com</p>
+<p>pm2 start auto_extract_tv-burrp-com</p>
+<h3>View running processes in your session:</h3>
+<p>pm2 list</p>

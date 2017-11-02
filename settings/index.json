@@ -1,0 +1,25 @@
+﻿{
+  "pathWithSites": "./sites/",
+  "supportedSites": [ "in.com", "tv-burrp-com" ],
+  "date": "20160921",
+  "sites": [
+    {
+      "name": "in.com",
+      "link": "in-com",
+      "urlDownload": "http://webgrabplus.com/sites/default/files/download/ini/info/zip/India_in.com.zip",
+      "urlChannel": "http://www.in.com/ajax/getChannelSchedule.php?cid={id}&dt={date}"
+    },
+    {
+      "name": "tv.burrp.com",
+      "link": "tv-burrp-com",
+      "urlDownload": "http://webgrabplus.com/sites/default/files/download/ini/info/zip/India_tv.burrp.com.zip",
+      "urlChannel": "http://tv.burrp.com/channel/{id}/{date}%2000:00:00"
+    },
+    {
+      "name": "indiatimes.com",
+      "link": "indiatimes-com",
+      "urlDownload": "http://webgrabplus.com/sites/default/files/download/ini/info/zip/India_indiatimes.com.zip",
+      "urlChannel": "http://timesofindia.indiatimes.com/tvschannel_schedule.cms?fromdatetime={date}0000&todatetime={date}2359&channelname={id}"
+    }
+  ]
+}

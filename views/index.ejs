@@ -1,0 +1,27 @@
+﻿<% layout('layout') -%>
+
+<% if(is_login) { %>
+    <h2>Select site you need: </h2>
+
+    <% for (var i = 0; i < allSites.length; i++) { %>
+        <a href="site/<%= allSites[i]['link'] %>" class="btn btn-info btn-lg" role="button"><%= allSites[i]['name'] %></a>
+    <% } %>
+    <p></p>
+    <div>
+        <a href="site2/tatasky-com" class="btn btn-info btn-lg" role="button">tatasky.com</a>
+    </div>
+    <div>
+        <h2>
+            Logs:
+        </h2>
+        <div>
+            <a href="/logs/in-com/" class="btn btn-info btn-lg" role="button">in.com</a> <a href="/logs/indiatimes-com/" class="btn btn-info btn-lg" role="button">indiatimes.com</a> <a href="/logs/tv-burrp-com/" class="btn btn-info btn-lg" role="button">tv.burrp.com</a>
+        </div>
+    </div>
+    <div>
+        <h2>Bot settings</h2>
+        <a href="/bots" class="btn btn-info btn-lg" role="button">Bots</a>
+    </div>
+<% } else { %>
+    <h2>Please log in to see sites you can parse</h2>
+<% } %>

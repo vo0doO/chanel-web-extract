@@ -1,0 +1,50 @@
+<% layout('layout') -%>
+
+<h1>Bots</h1>
+
+<h3>IN.COM</h3>
+<style>
+    .added {
+        color: green;
+    }
+</style>
+<div id="inComChannels">
+   <% for (var i = 0; i < in_com.channels.length; i++) { %>
+       <% if (in_com.channels[i][2] == 'enabled') { %>
+            <span class="added"><b>>><%= in_com.channels[i][1] %><< </b><a href="/deletechannel/in-com/<%= in_com.channels[i][0] %>">Dell</a></span> |
+       <% } else {%>
+            <span><%= in_com.channels[i][1] %> <a href="/addchannel/in-com/<%= in_com.channels[i][0] %>">Add</a></span> |
+       <% } %>
+   <% } %>
+</div>
+<!--<form method="POST" method="post" action="/botsettings">
+    <div class="form-group">
+        <label for="site">In.com</label>
+        <input type="text" class="form-control" id="usr">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+</form>-->
+
+<h3>INDIATIMES.COM</h3>
+
+<div id="indiaTimesChannels">
+   <% for (var i = 0; i < indiatimes_com.channels.length; i++) { %>
+       <% if (indiatimes_com.channels[i][2] == 'enabled') { %>
+            <span class="added"><b>>><%= indiatimes_com.channels[i][1] %><< </b><a href="/deletechannel/indiatimes-com/<%= indiatimes_com.channels[i][0] %>">Dell</a></span> |
+       <% } else {%>
+            <span><%= indiatimes_com.channels[i][1] %> <a href="/addchannel/indiatimes-com/<%= indiatimes_com.channels[i][0] %>">Add</a></span> |
+       <% } %>
+   <% } %>
+</div>
+
+<h3>TV.BURRP.COM</h3>
+
+<div id="tvBurrpCom">
+   <% for (var i = 0; i < tv_burrp_com.channels.length; i++) { %>
+       <% if (tv_burrp_com.channels[i][2] == 'enabled') { %>
+            <span class="added"><b>>><%= tv_burrp_com.channels[i][1] %><< </b><a href="/deletechannel/tv-burrp-com/<%= tv_burrp_com.channels[i][0].replace('/', '--') %>">Dell</a></span> |
+       <% } else {%>
+            <span><%= tv_burrp_com.channels[i][1] %> <a href="/addchannel/tv-burrp-com/<%= tv_burrp_com.channels[i][0].replace('/', '--') %>">Add</a></span> |
+       <% } %>
+   <% } %>
+</div>

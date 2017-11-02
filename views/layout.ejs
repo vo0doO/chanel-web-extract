@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>
+        <%= title %>
+    </title>
+    <script src="/javascripts/jquery-3.1.1.min.js"></script>
+
+    <!-- Popup loading JS -->
+    <script src="/javascripts/simple_popup/main.js"></script>
+    <script src="/javascripts/simple_popup/modernizr.js"></script>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/stylesheets/login_popup.css" rel="stylesheet">
+    <link href="/stylesheets/site.css" rel="stylesheet">
+
+    <!-- Popup loading CSS -->
+    <link rel="stylesheet" href="/stylesheets/simple_popup/style.css" />
+    <link rel="stylesheet" href="/stylesheets/simple_popup/reset.css" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Home</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <% if(!is_login) { %>
+                        <li>
+                            <a onclick="document.getElementById('id01').style.display='block'" href="#">Login</a>
+                        </li>
+                        <li>
+                            <a onclick="document.getElementById('id02').style.display='block'" href="#">Register</a>
+                        </li>
+                    <% }  else { %>
+                        <li>
+                            <a href="/user/<%= login %>">Hi, <%= login %></a>
+                        </li>
+                        <li>
+                             <a href="/logout">Log out</a>
+                        </li>
+                        <li>
+                            <a href="/info">Information</a>
+                        </li>
+                    <% } %>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+            <%- body %>
+        </div>
+        <!-- /.row -->
+
+    </div>
+
+    <!-- Login form -->
+    <%- include /partials/login.ejs %>
+    <%- include /partials/register.ejs %>
+    <!-- End login form -->
+
+    <!-- Loading -->
+    <%- include /partials/popup_loading.ejs %>
+
+        <script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+        <!-- End login form -->
+        <!-- /.container -->
+        
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="/javascripts/bootstrap.min.js"></script>
+
+</body>
+
+</html>

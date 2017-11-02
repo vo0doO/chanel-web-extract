@@ -1,0 +1,22 @@
+{
+  "name": "chanel-web-extract",
+  "version": "0.0.0",
+  "description": "chanel web extract",
+  "main": "app.js",
+  "author": {
+    "name": "xatri",
+    "email": "xatrixxx@gmail.com"
+  },
+  "dependencies": {
+    "express": "3.4.4",
+    "ejs": "*",
+    "ejs-locals": "*",
+    "stylus": "*",
+    "mongodb": "*",
+    "unzip": "*",
+    "moment": "*",
+    "sync-request": "2.2.0",
+    "request": "*",
+    "zlib": "*"
+  }
+}

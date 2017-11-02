@@ -1,0 +1,10 @@
+<% layout('layout') -%>
+
+<h1>Bot <%= siteName %> logs</h1>
+<div>
+    <% for (var i = 1; i <= logs.length; i++) { %>
+        <p>
+            <%- logs[i] %>
+        </p>
+    <% } %>
+</div>

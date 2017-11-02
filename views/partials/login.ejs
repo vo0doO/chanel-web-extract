@@ -1,0 +1,18 @@
+
+<div id="id01" class="modal">
+
+    <form class="modal-content animate" method="POST" action="/login">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+        <div class="container">
+            <h2>Log in</h2>
+            <label><b>Username</b></label>
+            <input class="auth_input" type="text" placeholder="Enter Username" name="login" required>
+
+            <label><b>Password</b></label>
+            <input class="auth_input" type="password" placeholder="Enter Password" name="password" required>
+
+            <button class="auth_button loading_pop" id="login_button" type="submit">Login</button>
+        </div>
+    </form>
+</div>

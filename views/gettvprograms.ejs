@@ -1,0 +1,11 @@
+﻿<% layout('layout') -%>
+<h1>Get TV show</h1>
+<form method="POST" action="/gettvprogramspost">
+    <select name="site">
+    <% for (var i = 0; i < allSites.length; i++) { %>
+        <option value="<%= allSites[i]['name'] %>"><%= allSites[i]["name"] %></option>
+    <% } %>
+    </select>
+    <input type="hidden" name"xxx" value="111"/>
+    <button type="submit">Download</button>
+</form>
